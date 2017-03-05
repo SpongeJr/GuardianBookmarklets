@@ -2,7 +2,8 @@
 ==================================================================
 A list of bookmarklets to be used by Khan Academy Guardians.
 
-![Khan Academy](https://d3q6qq2zt8nhwv.cloudfront.net/platform/ad4b22b3481f4f0fa379bbde3f82c9bb.png)
+![Khan Academy]
+(https://d3q6qq2zt8nhwv.cloudfront.net/platform/ad4b22b3481f4f0fa379bbde3f82c9bb.png)
 
 Table Of Contents
 -----------------
