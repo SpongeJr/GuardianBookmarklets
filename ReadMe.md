@@ -15,7 +15,7 @@ Table Of Contents
   
   3. Project Evaluations
   
-      - Project Evaluation History Browser(#project-evaluation-history-browser
+      - Project Evaluation History Browser(#project-evaluation-history-browser)
 
 
 ## KAID Link Inserter
@@ -35,5 +35,26 @@ Activate this bookmarklet, and any profile links on a page will get a second lin
 #### Author
 
 Josh
+
+**[Back to top](#table-of-contents)**
+
+
+## Project Evaluation History Browser
+
+### The Issue
+
+When viewing a Project Evaluation, information about the author isn’t surfaced to Guardians (or anyone else). Also, there may be several evaluations and evaluators of a Project, as an evaluator may have not passed it, or an evaluation might be flagged or deleted (as happens with discussion banned users, or users that delete their account). This makes investigating certain moderation and technical issues very difficult.
+
+### The Old Way
+
+Information about Project Evaluations is passed down to the client, even to basic, non-authenticated users, but this info is never surfaced. It can be retrieved by a visit to browser developer tools or digging through the response of an [in-browser API call](https://www.khanacademy.org/api/internal/discussions/scratchpad/6382664161689600/projectfeedback), for example, but these are tricky and time consuming procedures.
+
+### The New Way
+
+Activate this bookmarklet, and you can now see the author of the evaluation, and visit their profile with a single click on their profile link! If a Project has had multiple evaluations, the “Prev” and “Next” buttons can be used to move through them.
+
+#### Author
+
+Eytukan
 
 **[Back to top](#table-of-contents)**
