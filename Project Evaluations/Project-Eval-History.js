@@ -8,6 +8,7 @@ var projID = document.location.pathname.split("/")[3],
   handleResponse = function(a) {
     console.log(a);
     a = a.feedback[0].answers;
+    console.log(document.getElementById("evalBrowse-status").value);
     var b = a[document.getElementById("evalBrowse-status").value].authorKaid,
       c = a[document.getElementById("evalBrowse-status").value].authorNickname,
       d = a[document.getElementById("evalBrowse-status").value].content;
@@ -16,7 +17,9 @@ var projID = document.location.pathname.split("/")[3],
   };
 
 function increase() {
-  4 >= i + 1 ? i++ : i;
+  $.getJSON("https://www.khanacademy.org/api/internal/discussions/scratchpad/" + projID + "/projectfeedback", function(a) {
+    return a.feedback[0].answers.length === i + 1 ? i : i++;
+  })
   document.getElementById("evalBrowse-status").value = i
 }
 
