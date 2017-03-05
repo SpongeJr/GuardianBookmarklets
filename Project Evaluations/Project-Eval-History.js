@@ -6,13 +6,11 @@ $evDiv.prepend($statusDiv);
 $statusDiv.after($buttonDiv);
 var projID = document.location.pathname.split("/")[3],
   handleResponse = function(a) {
-    console.log(a);
     a = a.feedback[0].answers;
-    console.log(document.getElementById("evalBrowse-status").value);
     var b = a[document.getElementById("evalBrowse-status").value].authorKaid,
       c = a[document.getElementById("evalBrowse-status").value].authorNickname,
       d = a[document.getElementById("evalBrowse-status").value].content;
-    $statusDiv.text("Loaded! Showing Eval " + (document.getElementById("evalBrowse-status").value + 1) + " of " + a.length + ". Eval by " + c + " (" + b + ")");
+    $statusDiv.html("Loaded! Showing Eval " + (document.getElementById("evalBrowse-status").value + 1) + " of " + a.length + ". Eval by " + c + " (<a href=\"https://www.khanacademy.org/profile/" + b + "\">" + b + "</a>)");
     $(".eval-left").html(d)
   };
 
