@@ -1,10 +1,9 @@
 var i = 0,
-  $nextButtonDiv = $('<div class="inlineButtonContainer_1srpyz7"><button onClick="increase();" id="next-evalBrowse" aria-disabled="false" class="kui-button base_1h2bej0-o_O-notDisabled_ro0g1e-o_O-small_10vmyc6-o_O-base_t6mlt4-o_O-notDisabled_lhbaf0" style="width: auto;">Next</button>'),
-  $prevButtonDiv = $('<button onClick="decrease();" id="prev-evalBrowse" aria-disabled="false" class="kui-button base_1h2bej0-o_O-notDisabled_ro0g1e-o_O-small_10vmyc6-o_O-base_t6mlt4-o_O-notDisabled_lhbaf0" style="width: auto;">Prev</button></div>'),
+  $buttonDiv = $('<button onClick="decrease();" id="prev-evalBrowse" aria-disabled="false" class="kui-button base_1h2bej0-o_O-notDisabled_ro0g1e-o_O-small_10vmyc6-o_O-base_t6mlt4-o_O-notDisabled_lhbaf0" style="width: auto;">Prev</button>&emsp;&emsp;&emsp;<button onClick="increase();" id="next-evalBrowse" aria-disabled="false" class="kui-button base_1h2bej0-o_O-notDisabled_ro0g1e-o_O-small_10vmyc6-o_O-base_t6mlt4-o_O-notDisabled_lhbaf0" style="width: auto;">Next</button>'),
   $evDiv = $("div.eval-container"),
   $statusDiv = $('<div id="evalBrowse-status" value="0">Loading Evaluations. . .<span>');
 $evDiv.prepend($statusDiv);
-$statusDiv.after($nextButtonDiv).after($prevButtonDiv);
+$statusDiv.after($buttonDiv);
 var projID = document.location.pathname.split("/")[3],
   handleResponse = function(a) {
     console.log(a);
