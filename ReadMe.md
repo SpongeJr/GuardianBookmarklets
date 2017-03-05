@@ -15,7 +15,7 @@ Table Of Contents
   
   3. Project Evaluations
   
-      - Project Evaluation History Browser(#project-evaluation-history-browser)
+      - [Project Evaluation History Browser](#project-evaluation-history-browser)
 
 
 ## KAID Link Inserter
