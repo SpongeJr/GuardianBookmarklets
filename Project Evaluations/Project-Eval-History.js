@@ -1,9 +1,9 @@
 var i = 0,
-  $buttonDiv = $('<button onClick="decrease();" id="prev-evalBrowse" aria-disabled="false" class="kui-button base_1h2bej0-o_O-notDisabled_ro0g1e-o_O-small_10vmyc6-o_O-base_t6mlt4-o_O-notDisabled_lhbaf0" style="width: auto;">Prev</button>&emsp;&emsp;&emsp;<button onClick="increase();" id="next-evalBrowse" aria-disabled="false" class="kui-button base_1h2bej0-o_O-notDisabled_ro0g1e-o_O-small_10vmyc6-o_O-base_t6mlt4-o_O-notDisabled_lhbaf0" style="width: auto;">Next</button>'),
+  $buttons = $('<button onClick="decrease();" id="prev-evalBrowse" aria-disabled="false" class="kui-button base_1h2bej0-o_O-notDisabled_ro0g1e-o_O-small_10vmyc6-o_O-base_t6mlt4-o_O-notDisabled_lhbaf0" style="width: auto;">Prev</button>&emsp;&emsp;&emsp;<button onClick="increase();" id="next-evalBrowse" aria-disabled="false" class="kui-button base_1h2bej0-o_O-notDisabled_ro0g1e-o_O-small_10vmyc6-o_O-base_t6mlt4-o_O-notDisabled_lhbaf0" style="width: auto;">Next</button>'),
   $evDiv = $("div.eval-container"),
   $statusDiv = $('<div id="evalBrowse-status" value="0">Loading Evaluations. . .<span>');
 $evDiv.prepend($statusDiv);
-$statusDiv.after($buttonDiv);
+$statusDiv.after($buttons);
 var projID = document.location.pathname.split("/")[3],
   handleResponse = function(a) {
     a = a.feedback[0].answers;
