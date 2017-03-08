@@ -16,8 +16,11 @@ Table Of Contents
   3. Project Evaluations
   
       - [Project Evaluation History Browser](#project-evaluation-history-browser)
-
-
+  
+  4. Hot List
+  
+      - [Hot List Flag Browser](#hot-list-flag-browser)
+ 
 ## KAID Link Inserter
 
 ### The Issue
@@ -52,6 +55,27 @@ Information about Project Evaluations is passed down to the client, even to basi
 ### The New Way
 
 Activate this bookmarklet, and you can now see the author of the evaluation, and visit their profile with a single click on their profile link! If a Project has had multiple evaluations, the “Prev” and “Next” buttons can be used to move through them.
+
+#### Author
+
+Eytukan
+
+**[Back to top](#table-of-contents)**
+
+
+## Hot List Flag Browser
+
+### The Issue
+
+
+
+### The Old Way
+
+
+
+### The New Way
+
+
 
 #### Author
 
