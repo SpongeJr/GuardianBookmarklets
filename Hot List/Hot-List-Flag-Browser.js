@@ -25,7 +25,7 @@ for (; i < programLinks.length; i++) {
     ids = [],
     objs = [],
     result;
-  getJSON("https://www.khanacademy.org/api/internal/show_scratchpad?scratchpad_id=" + id, function(a, c) {
+  getJSON("https://www.khanacademy.org/api/internal/scratchpads/" + id, function(a, c) {
     handleResponse(c.scratchpad);
     counter++
   })
