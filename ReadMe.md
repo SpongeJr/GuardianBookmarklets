@@ -58,7 +58,7 @@ Activate this bookmarklet, and you can now see the author of the evaluation, and
 
 #### Author
 
-Eytukan
+Evan (Eytukan)
 
 **[Back to top](#table-of-contents)**
 
@@ -77,8 +77,8 @@ Eytukan
 
 
 
-#### Author
+#### Authors
 
-Eytukan
+Evan (Eytukan), Blaze
 
 **[Back to top](#table-of-contents)**
