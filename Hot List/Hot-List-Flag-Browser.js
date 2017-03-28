@@ -12,23 +12,24 @@ var programLinks = document.getElementsByClassName("link_1uvuyao-o_O-noUnderline
     };
 
 function handleResponse(a) {
-    ids.push(parseInt(programLinks[counter].href.split("/")[5]));
+    ids.push(+programLinks[counter].href.split("/")[5]);
     objs.push(a);
-    if (counter === programLinks.length - 1)
+    if (counter === programLinks.length - 1) {
         for (result = objs.sort(function(a, b) {
                 return ids.indexOf(a.id) < ids.indexOf(b.id) ? -1 : 1
-            }), a = 0; a < result.length; a++) {
+            }), a = 0, res = result.length; a < res; a++) {
             programLinks[a].nextSibling.nextSibling.innerHTML += " \u00b7 <span title=\"" + result[a].flags.join('\n') + "\">" + result[a].flags.length + " Flag" + (1 === result[a].flags.length ? "" : "s")
-        }
-}
-for (; i < programLinks.length; i++) {
-    var id = programLinks[i].href.split("/")[5],
-        counter = 0,
-        ids = [],
-        objs = [],
-        result;
-    getJSON("https://www.khanacademy.org/api/internal/scratchpads/" + id, function(a, c) {
-        handleResponse(c);
-        counter++
-    })
+          }
+    }
+    for (var len = programLinks.lenth; i < len; i++) {
+        var id = programLinks[i].href.split("/")[5],
+            counter = 0,
+            ids = [],
+            objs = [],
+            result;
+        getJSON("https://www.khanacademy.org/api/internal/scratchpads/" + id, function(a, c) {
+            handleResponse(c);
+            counter++
+        })
+    }
 }
