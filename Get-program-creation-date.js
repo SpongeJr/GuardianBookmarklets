@@ -9,26 +9,14 @@
 
 
 // Indented and clean code
-var ID = window.location.href.split("/")[5],
-box = document.getElementById("save-progress-text"),
+var ID = window.location.href.split("/")[5];
+var date = document.getElementsByClassName("about_anfflz");
 
-getJSON = function(url, callback) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET',url,true);
-    xhr.responseType = 'json';
-    xhr.onload = function() {
-        callback(xhr.response);
-    };
-    xhr.send();
-};
-function getDate(data) {
-    box.style.textAlign = "center";
-    box.innerHTML = "Created: " + data.created + "<br> Last updated: " + data.date
-};
-getJSON("https://www.khanacademy.org/api/labs/scratchpads/" + ID, function(data){
-    getDate(data);
+$.getJSON("https://www.khanacademy.org/api/labs/scratchpads/" + ID, function(data) {
+    date[0].childNodes[date[0].childElementCount-1].childNodes[9].innerHTML = "<br>Created: " + data.created + "<br>Last updated: " + data.date;
 });
 
 
 // Minified code
-javascript:var ID=window.location.href.split("/")[5],box=document.getElementById("save-progress-text"),getJSON=function(url,callback){var xhr=new XMLHttpRequest();xhr.open('GET',url,true);xhr.responseType='json';xhr.onload=function(){callback(xhr.response)};xhr.send()};function getDate(data){box.style.textAlign="center";box.innerHTML="Created: "+data.created+"<br> Last updated: "+data.date};getJSON("https://www.khanacademy.org/api/labs/scratchpads/" + ID, function(data){getDate(data);});
+javascript:var ID=window.location.href.split("/")[5],date=document.getElementsByClassName("about_anfflz");$.getJSON("https://www.khanacademy.org/api/labs/scratchpads/" + ID, function(data){date[0].childNodes[date[0].childElementCount-1].childNodes[9].innerHTML=("<br>Created: "+data.created+"<br>Last updated: "+data.date);});
+
