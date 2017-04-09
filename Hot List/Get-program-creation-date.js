@@ -15,8 +15,3 @@ var date = document.getElementsByClassName("about_anfflz");
 $.getJSON("https://www.khanacademy.org/api/labs/scratchpads/" + ID, function(data) {
     date[0].childNodes[date[0].childElementCount-1].childNodes[9].innerHTML = "<br>Created: " + data.created + "<br>Last updated: " + data.date;
 });
-
-
-// Minified code
-javascript:var ID=window.location.href.split("/")[5],date=document.getElementsByClassName("about_anfflz");$.getJSON("https://www.khanacademy.org/api/labs/scratchpads/" + ID, function(data){date[0].childNodes[date[0].childElementCount-1].childNodes[9].innerHTML=("<br>Created: "+data.created+"<br>Last updated: "+data.date);});
-
