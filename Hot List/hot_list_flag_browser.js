@@ -12,7 +12,7 @@ var programLinks = document.getElementsByClassName("link_1uvuyao-o_O-noUnderline
     };
 
 function handleResponse(a) {
-    ids.push(parseInt(programLinks[counter].href.split("/")[5]));
+    ids.push(+programLinks[counter].href.split("/")[5]);
     objs.push(a);
     if (counter === programLinks.length - 1)
         for (result = objs.sort(function(a, b) {
