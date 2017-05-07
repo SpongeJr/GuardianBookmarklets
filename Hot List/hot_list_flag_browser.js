@@ -14,12 +14,13 @@ var programLinks = document.getElementsByClassName("link_1uvuyao-o_O-noUnderline
 function handleResponse(a) {
     ids.push(+programLinks[counter].href.split("/")[5]);
     objs.push(a);
-    if (counter === programLinks.length - 1)
+    if (counter === programLinks.length - 1) {
         for (result = objs.sort(function(a, b) {
                 return ids.indexOf(a.id) < ids.indexOf(b.id) ? -1 : 1
             }), a = 0; a < result.length; a++) {
             programLinks[a].nextSibling.nextSibling.innerHTML += " \u00b7 <span title=\"" + result[a].flags.join('\n') + "\">" + result[a].flags.length + " Flag" + (1 === result[a].flags.length ? "" : "s")
         }
+    }
 }
 for (var len = programLinks.length; i < len; i++) {
     var id = programLinks[i].href.split("/")[5],
