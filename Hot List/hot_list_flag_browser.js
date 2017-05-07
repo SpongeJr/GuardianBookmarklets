@@ -21,7 +21,7 @@ function handleResponse(a) {
             programLinks[a].nextSibling.nextSibling.innerHTML += " \u00b7 <span title=\"" + result[a].flags.join('\n') + "\">" + result[a].flags.length + " Flag" + (1 === result[a].flags.length ? "" : "s")
         }
 }
-for (; i < programLinks.length; i++) {
+for (var len = programLinks.length; i < len; i++) {
     var id = programLinks[i].href.split("/")[5],
         counter = 0,
         ids = [],
