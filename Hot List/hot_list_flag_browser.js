@@ -29,7 +29,7 @@ for (var len = programLinks.length; i < len; i++) {
         objs = [],
         result;
     getJSON("https://www.khanacademy.org/api/internal/scratchpads/" + id, function(a, c) {
-        handleResponse(c);
+        handleResponse(a);
         counter++
     })
 }
